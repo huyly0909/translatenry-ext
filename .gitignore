@@ -1,0 +1,18 @@
+# Build output
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node (if ever added)
+node_modules/
+
+# Misc
+*.zip

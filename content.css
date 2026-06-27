@@ -1,0 +1,7 @@
+/* Translatenry content styles.
+ * The overlay renders inside a Shadow DOM (see content.js), which fully isolates
+ * its styling from the host page, so almost nothing is needed here. This file
+ * exists because the manifest references it and to guard the host element. */
+#__translatenry_overlay_host {
+  all: initial;
+}
