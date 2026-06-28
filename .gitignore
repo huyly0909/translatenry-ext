@@ -16,3 +16,6 @@ node_modules/
 
 # Misc
 *.zip
+
+# Chrome extension auto-generated
+_metadata/
