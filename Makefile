@@ -24,11 +24,13 @@ build:
 	@rm -rf $(UNPACKED_DIR)
 	@mkdir -p $(UNPACKED_DIR) $(VERSIONS_DIR)
 	@for f in $(SRC_FILES); do cp -r $$f $(UNPACKED_DIR)/; done
-	@cd $(UNPACKED_DIR) && zip -r ../versions/$(ZIP_NAME) . >/dev/null
+	@cd $(UNPACKED_DIR) && zip -q -r ../versions/$(ZIP_NAME) .
+	@cp $(VERSIONS_DIR)/$(ZIP_NAME) $(DIST_DIR)/translatenry.zip
 	@echo ""
 	@echo "✅ $(UNPACKED_DIR)/         → Load unpacked in Chrome"
-	@echo "✅ $(VERSIONS_DIR)/$(ZIP_NAME) → Share with others"
-	@echo "   Size: $$(du -h $(VERSIONS_DIR)/$(ZIP_NAME) | cut -f1)"
+	@echo "✅ $(DIST_DIR)/translatenry.zip   → 🚀 File to upload to GitHub Release"
+	@echo "✅ $(VERSIONS_DIR)/$(ZIP_NAME) → Archived version"
+	@echo "   Size: $$(du -h $(DIST_DIR)/translatenry.zip | cut -f1)"
 
 ## Remove all outputs
 clean:
